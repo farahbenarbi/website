@@ -1,0 +1,25 @@
+/* Custom Colors for Section Titles */
+#home h2 {
+  color: #9c27b0;
+  text-shadow: 0 0 10px #9c27b0;
+}
+
+#what h2 {
+  color: #9c27b0;
+  text-shadow: 0 0 10px #9c27b0;
+}
+
+#projects h2 {
+  color: #9c27b0;
+  text-shadow: 0 0 10px #9c27b0;
+}
+
+#dashboard h2 {
+  color: #9c27b0;
+  text-shadow: 0 0 10px #9c27b0;
+}
+
+#contact h2 {
+  color: #9c27b0;
+  text-shadow: 0 0 10px #9c27b0;
+}
