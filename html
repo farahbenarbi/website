@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoT Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 0 20px #00f2ff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #00f2ff;
+      text-shadow: 0 0 10px #00f2ff;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      background: #00f2ff20;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #00f2ff60;
+    }
+
+    section {
+      padding: 40px 0;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .device-grid {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .device-card {
+      background: #111;
+      padding: 20px;
+      border-radius: 15px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 0 20px #00f2ff88;
+      transition: transform 0.3s;
+    }
+
+    .device-card:hover {
+      transform: scale(1.05);
+    }
+
+    .device-card h3 {
+      color: #ff4081;
+      margin-bottom: 15px;
+    }
+
+    .device-card button {
+      background: linear-gradient(to right, #00f2ff, #3a7bd5);
+      border: none;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .device-card button:hover {
+      opacity: 0.8;
+    }
+
+    .status {
+      font-size: 20px;
+      margin-top: 15px;
+      font-weight: bold;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .on {
+      background: #00ffcc;
+      color: #000;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+
+    .off {
+      background: #ff3b3b;
+      color: #fff;
+      box-shadow: 0 0 10px #ff3b3b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #00000044;
+      box-shadow: 0 -1px 10px #00f2ff44;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>IoT Projects Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#what">What is IoT?</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#dashboard">Live Dashboard</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to My IoT Projects</h2>
+    <p>This website showcases my work and knowledge in the Internet of Things field. You’ll find real-time simulations and project demos.</p>
+  </section>
+
+  <section id="what">
+    <h2>What is IoT?</h2>
+    <p>IoT (Internet of Things) is a system of interconnected physical devices that can collect, send, and receive data over the internet — without requiring human-to-human or human-to-computer interaction. IoT represents the future of connectivity, where objects become "smart" by communicating and collaborating via the internet.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My IoT Projects</h2>
+    <div class="project">
+      <h3>Smart Weather Monitoring Dashboard</h3>
+      <p>Simulates real-time tracking of temperature and humidity.</p>
+      <a href="https://farahbenarbi.github.io/iot-dashboard/" target="_blank">View Demo</a>
+    </div>
+  </section>
+
+  <section id="dashboard">
+    <h2>Live Dashboard (Simulation)</h2>
+    <p>Here you will control smart devices in real-time.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <h3>Light</h3>
+        <button onclick="toggleDevice('light')">Toggle Light</button>
+        <p class="status off" id="lightStatus">Off</p>
+      </div>
+
+      <div class="device-card">
+        <h3>Fan</h3>
+        <button onclick="toggleDevice('fan')">Toggle Fan</button>
+        <p class="status off" id="fanStatus">Off</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 IoT Projects Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyA5-9_rFH_C5UVqF_bcywV1odjBG8S7xoQ",
+      authDomain: "iot-dashboard-3ccd3.firebaseapp.com",
+      projectId: "iot-dashboard-3ccd3",
+      storageBucket: "iot-dashboard-3ccd3.appspot.com",
+      messagingSenderId: "583952329350",
+      appId: "1:583952329350:web:474403b0a3c33f4a9aff07"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    const refs = {
+      light: db.ref("devices/light"),
+      fan: db.ref("devices/fan")
+    };
+
+    function toggleDevice(device) {
+      refs[device].once("value").then(snapshot => {
+        const current = snapshot.val();
+        const newState = current === "On" ? "Off" : "On";
+        refs[device].set(newState);
+      });
+    }
+
+    function updateStatus(device, value) {
+      const statusElement = document.getElementById(`${device}Status`);
+      statusElement.textContent = value;
+      statusElement.classList.remove("on", "off");
+      statusElement.classList.add(value === "On" ? "on" : "off");
+    }
+
+    refs.light.on("value", snap => {
+      updateStatus("light", snap.val() || "Off");
+    });
+
+    refs.fan.on("value", snap => {
+      updateStatus("fan", snap.val() || "Off");
+    });
+  </script>
+</body>
+</html>
